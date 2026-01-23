@@ -21,6 +21,9 @@ https://github.com/user-attachments/assets/a3b57152-8d97-43ce-bd99-26dc9a145c29
 - Efficiency: Fits within 1gb vram meaning it can fit in any local gpu.
 
 ## Usage
+You can try it locally or on colab
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1cDaxtbSDLRmu6tRV_781Of_GSjHSo1Cu?usp=sharing)
 
 #### Simple installation:
 ```
