@@ -1,5 +1,6 @@
 --find-links https://k2-fsa.github.io/icefall/piper_phonemize.html
 
+# Core ML dependencies
 torch
 torchaudio
 numpy
@@ -23,3 +24,9 @@ jieba
 piper_phonemize
 pypinyin
 setuptools<81
+
+# API Server dependencies
+fastapi>=0.100.0
+uvicorn[standard]>=0.23.0
+python-multipart>=0.0.6
+pydantic>=2.0.0

@@ -25,7 +25,31 @@ https://github.com/user-attachments/assets/a3b57152-8d97-43ce-bd99-26dc9a145c29
 - Efficiency: Fits within 1gb vram meaning it can fit in any local gpu.
 
 ## Usage
-You can try it locally, colab, or spaces.
+
+### Quick Start - OpenAI API Server (NEW!)
+
+Run LuxTTS as an OpenAI-compatible API server for use with SillyTavern, Discord bots, and more:
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Start the API server
+python start_server.py
+
+# In another terminal, upload a voice
+python upload_voice.py your_voice_sample.wav --id my_voice
+
+# Test it
+curl -X POST "http://localhost:9999/v1/audio/speech" \
+  -H "Content-Type: application/json" \
+  -d '{"model":"luxtts","input":"Hello!","voice":"my_voice"}' \
+  --output test.mp3
+```
+
+See [OPENAI_API_SETUP.md](OPENAI_API_SETUP.md) for detailed setup with SillyTavern and Discord.
+
+### Try it Online
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1cDaxtbSDLRmu6tRV_781Of_GSjHSo1Cu?usp=sharing)
 [![Open in Spaces](https://huggingface.co/datasets/huggingface/badges/resolve/main/open-in-hf-spaces-sm.svg)](https://huggingface.co/spaces/YatharthS/LuxTTS)
